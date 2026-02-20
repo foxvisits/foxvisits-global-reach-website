@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Strategy Call | FOXVISITS</title>
+  <meta name="description" content="Multi-step strategic qualification flow for high-end engagements." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header class="site-header"><div class="container header-inner"><a href="/" class="logo">FOXVISITS</a><nav class="nav"><a href="/services/">Services</a><a href="/industries/">Industries</a><a href="/insights/">Insights</a><a href="/locations/">Locations</a><a href="/case-studies/">Case Studies</a><a href="/strategy-call/">Strategy Call</a></nav></div></header>
+
+<main class="container">
+  <p class="breadcrumb">Home / Strategy Call</p>
+  <h1>Strategic Growth Qualification</h1>
+  <p class="lead">A 7-step intake to qualify fit, align priorities, and recommend a service tier before booking.</p>
+
+  <section>
+    <h2>Qualification Form</h2>
+    <form id="strategyForm" class="form-wizard" novalidate>
+      <div class="wizard-progress"><span id="progressLabel">Step 1 of 7</span><div class="progress-bar"><div id="progressFill"></div></div></div>
+
+      <fieldset class="wizard-step active" data-step="1">
+        <legend>Step 1: Industry</legend>
+        <label for="industry">Select your industry</label>
+        <select id="industry" name="industry" required>
+          <option value="">Choose…</option>
+          <option>Real Estate & Developers</option><option>Law Firms</option><option>Medical & Clinics</option><option>SaaS & Tech</option><option>E-commerce Brands</option><option>Financial Services</option><option>Construction & Contractors</option><option>Hospitality</option>
+        </select>
+      </fieldset>
+
+      <fieldset class="wizard-step" data-step="2"><legend>Step 2: Company size</legend><label for="companySize">Team size</label><select id="companySize" name="companySize" required><option value="">Choose…</option><option>1-10</option><option>11-30</option><option>31-100</option><option>101-300</option><option>300+</option></select></fieldset>
+      <fieldset class="wizard-step" data-step="3"><legend>Step 3: Revenue range</legend><label for="revenue">Annual revenue</label><select id="revenue" name="revenue" required><option value="">Choose…</option><option>Under $250k</option><option>$250k - $1M</option><option>$1M - $5M</option><option>$5M - $20M</option><option>$20M+</option></select></fieldset>
+      <fieldset class="wizard-step" data-step="4"><legend>Step 4: Services needed</legend><label for="services">Priority services</label><select id="services" name="services" required><option value="">Choose…</option><option>Website + CRO</option><option>SEO + Content</option><option>Paid Media + Landing Pages</option><option>Analytics + Tracking</option><option>AI + Automation</option><option>Full Growth Stack</option></select></fieldset>
+      <fieldset class="wizard-step" data-step="5"><legend>Step 5: Budget range</legend><label for="budget">Monthly budget</label><select id="budget" name="budget" required><option value="">Choose…</option><option>Under $3k</option><option>$3k - $8k</option><option>$8k - $20k</option><option>$20k+</option></select></fieldset>
+      <fieldset class="wizard-step" data-step="6"><legend>Step 6: Timeline</legend><label for="timeline">Expected start timeline</label><select id="timeline" name="timeline" required><option value="">Choose…</option><option>Immediately</option><option>In 30 days</option><option>In 60–90 days</option><option>Exploring for later</option></select></fieldset>
+
+      <fieldset class="wizard-step" data-step="7">
+        <legend>Step 7: Contact</legend>
+        <label for="name">Full name</label><input id="name" name="name" type="text" required />
+        <label for="email">Work email</label><input id="email" name="email" type="email" required />
+        <label for="company">Company</label><input id="company" name="company" type="text" required />
+      </fieldset>
+
+      <div class="wizard-actions">
+        <button class="btn ghost" type="button" id="prevBtn">Back</button>
+        <button class="btn primary" type="button" id="nextBtn">Next</button>
+      </div>
+    </form>
+  </section>
+
+  <section>
+    <h2>Summary before submission</h2>
+    <div class="card" id="summaryBox"><p class="small">Complete the form to generate your strategic summary.</p></div>
+    <div class="grid cards-3">
+      <article class="card"><h3>Qualification indicator</h3><p id="qualification" class="lead">Fit: Pending</p></article>
+      <article class="card"><h3>Suggested service tier</h3><p id="tier" class="lead">Tier: Pending</p></article>
+      <article class="card"><h3>Calendar option</h3><p class="small">After qualification, book a call directly.</p><a id="calendarLink" class="btn ghost" href="https://calendly.com" target="_blank" rel="noreferrer">Book calendar slot</a></article>
+    </div>
+  </section>
+</main>
+
+<footer><div class="container">FOXVISITS — Performance-Driven Digital Growth Partner</div></footer>
+<script src="/strategy-call/wizard.js"></script>
+</body>
+</html>
